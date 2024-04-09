@@ -2,7 +2,7 @@ package com.psh10066.aop;
 
 import com.psh10066.aop.order.OrderRepository;
 import com.psh10066.aop.order.OrderService;
-import com.psh10066.aop.order.aop.AspectV5Order;
+import com.psh10066.aop.order.aop.AspectV6Service;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -17,7 +17,8 @@ import org.springframework.context.annotation.Import;
 //@Import(AspectV2.class)
 //@Import(AspectV3.class)
 //@Import(AspectV4Pointcut.class)
-@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class})
+//@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class})
+@Import(AspectV6Service.class)
 class AopTest {
 
     @Autowired
