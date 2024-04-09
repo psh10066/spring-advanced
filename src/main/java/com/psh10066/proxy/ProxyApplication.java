@@ -2,7 +2,7 @@ package com.psh10066.proxy;
 
 import com.psh10066.advanced.trace.logtrace.LogTrace;
 import com.psh10066.advanced.trace.logtrace.ThreadLocalLogTrace;
-import com.psh10066.proxy.config.v4_postprocessor.BeanPostProcessorConfig;
+import com.psh10066.proxy.config.v5_autoproxy.AutoProxyConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,8 @@ import org.springframework.context.annotation.Import;
 //@Import(DynamicProxyBasicConfig.class)
 //@Import(DynamicProxyFilterConfig.class)
 //@Import({ProxyFactoryConfigV1.class, ProxyFactoryConfigV2.class})
-@Import(BeanPostProcessorConfig.class)
+//@Import(BeanPostProcessorConfig.class)
+@Import(AutoProxyConfig.class)
 @SpringBootApplication(scanBasePackages = "com.psh10066.proxy.app.v3") // 컴포넌트 스캔 피하기
 public class ProxyApplication {
 
